@@ -1,0 +1,151 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.gathersensordata.MainActivity" >
+
+    <TextView
+   	   	android:id="@+id/ChirpSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+   		android:text="Chirp Selection \n 1:100(13-15); 2:300(13-15) (10); 3:1000(13-15); 4:2000(13-15); \n11:3*1; 12:10*1; 13:10*10;14:3*10"/>
+
+    <EditText
+   	   	android:id="@+id/inputChirp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+   		android:inputType="number"
+   		android:layout_below="@+id/ChirpSelect"/>
+    
+    <Button
+        android:id="@+id/emitStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EmitStart" 
+        android:layout_below="@+id/inputChirp" />
+
+    <Button
+        android:id="@+id/emitStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EmitStop" 
+        android:layout_below="@+id/emitStart" />
+    
+    <Button
+        android:id="@+id/recordStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RecordStart" 
+        android:layout_below="@+id/emitStop" />
+    
+    <Button
+        android:id="@+id/recordStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RecordStop"
+        android:layout_below="@+id/recordStart" />
+
+    <Button
+        android:id="@+id/Sensor_switch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text ="Sensor Switch"
+        android:onClick="SensorSwitch"
+        android:layout_below="@+id/recordStop"/>
+    
+
+    <TextView
+        android:id="@+id/LIGHT_reading"
+        android:text ="LIGHT(Lux): "
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Sensor_switch" />
+    
+    <TextView
+        android:id="@+id/RGB_reading"
+        android:text ="RGB(Lux): "
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LIGHT_reading" />
+ 
+
+    <TextView
+        android:id="@+id/Pressure_reading"
+        android:textColor="#FF0000"
+        android:text ="Altitude(m): "
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RGB_reading" />
+    
+    <TextView
+        android:id="@+id/Temper_reading"
+        android:textColor="#8A2BE2"
+        android:text ="Temperature(C): "
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Pressure_reading" />
+   
+    <TextView
+        android:id="@+id/Gyro_reading"
+        android:text ="rotation: "
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Temper_reading" />
+
+
+
+    <TextView
+        android:id="@+id/Proxi_reading"
+        android:text ="Proximity: "
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Gyro_reading" />
+
+    <TextView
+        android:id="@+id/Signal_reading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Proxi_reading" />
+    
+    <TextView
+        android:id="@+id/Accele_reading"
+        android:text ="Temperature(m/s2): "
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Signal_reading" />
+    
+    <TextView
+        android:id="@+id/Magne_reading"
+        android:textColor="#FF5500"
+        android:text ="MAGNETIC(uT): "
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Accele_reading" />
+ 
+    <TextView
+        android:id="@+id/Wifi_avaiable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Magne_reading" />
+
+
+    <TextView
+        android:id="@+id/Location_reading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Wifi_avaiable" />
+    
+    <TextView
+        android:id="@+id/Wifi_reading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Location_reading" />
+    
+    
+
+</RelativeLayout>
+
